@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html lang="en-US" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>Event Management</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="application-name" content="Event Management">
+
+
+<link rel="stylesheet" href="./css_event/style.css">
+
+    <style type="text/css" media="all">
+		@import url("css_linkedin/system.theme.css");
+		@import url("css_linkedin/engineering.css");
+		@import url("css_linkedin/nuevo.css");
+	</style>
+<!--[if lte IE 7]>
+<link type="text/css" rel="stylesheet" href="#" media="all" />
+<![endif]-->
+
+<!--[if IE 7]>
+<link type="text/css" rel="stylesheet" href="#" media="all" />
+<![endif]-->
+
+<!--[if IE 8]>
+<link type="text/css" rel="stylesheet" href="#" media="all" />
+<![endif]-->
+
+<!--[if IE 6]>
+<link type="text/css" rel="stylesheet" href="#" media="all" />
+<![endif]-->
+
+
+<!-- This site is optimized with the Yoast WordPress SEO plugin v1.4.7 - http://yoast.com/wordpress/seo/ -->
+<meta name="description" content="Event View, Socialize, Event Booking , Car Pooling, Car Booking, ">
+
+<!-- / Yoast WordPress SEO plugin. -->
+
+
+<script type="text/javascript" src="./js_event/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="./js_event/modernizr.full.min.js"></script>
+<script type="text/javascript" src="./js_event/sidr.js"></script>
+<script type="text/javascript" src="./js_event/scripts.js"></script>
+
+<body class="home blog chrome">
+	<div class="share-bar sticky">
+		<div id="sidr-menu">
+			<a id="mobile-menu" href="#"><i class="icon-menu"></i></a>
+			<a target="_blank" title="Follow us on Twitter" href="#" style="float:right"><i class="icon-twitter-share"></i></a>
+			<a href="#" title="Follow us on Facebook" style="float:right" target="_blank" class="icon-facebook-share"></a>
+			<a href="#" title="Follow us on Google+" target="_blank" style="float:right" class="icon-gplus-share"></a>
+			<a href="#" title="Follow us via RSS" target="_blank" style="float:right"><i class="icon-rss"></i></a>
+			<div id="sidr" class="sidr left">
+				<ul>
+				<li class="active">Search</li>
+				<li><form method="get" action="">
+				<input type="text" name="s" placeholder="Search Text" required="">
+				</form></li>
+				<li class="active">Post Categories</li>
+				<li><a href="#" rel="nofollow" class="icon-user">Events</a></li>
+				<li><a href="#" rel="nofollow" class="icon-picture">Calendar</a></li>
+				<li><a href="#" rel="nofollow" class="icon-brush">Car Pooling</a></li>
+				<li><a href="#" rel="nofollow" class="icon-layout">GUI</a></li>
+				<li><a href="#" rel="nofollow" class="icon-tools">Privacy Settings</a></li>
+				<li><a href="#" rel="nofollow" class="icon-doc-text-inv">UX</a></li>
+				<li class="active">Pages</li>
+				<li><a title="About Us" href="#">About Us</a></li>
+				<li><a title="Contact Us" href="#">Contact Us</a></li>
+				<li><a title="Advertise with Us" href="#">Advertise</a></li>
+				<li><a title="Write for Us" href="#">Write for Us</a></li>
+				<li><a title="View Our Popular Posts" href="#" rel="_blank">Android App</a></li>
+				<li><a title="Download our iOS App" href="#" target="_blank">iOS App</a></li>
+				</ul>
+			</div>
+		</div>
+		<nav role="navigation" class="nav clearfix">
+			<ul id="mega-navigation" class="mega-navigation">				
+			<li><a class="icon-home" href="./#"></a></li>
+			<li class="dropdown"><a href="#">Applications</a>
+			<div class="topic-dropdown">
+			<ul>
+			<li><a href="#" rel="nofollow" class="icon-user">Events</a></li>
+			<li><a href="#" rel="nofollow" class="icon-picture">Commute</a></li>
+			<li><a href="#" rel="nofollow" class="icon-brush">Bookings</a></li>
+			<li><a href="#" rel="nofollow" class="icon-layout">Conference</a></li>
+			<li><a href="#" rel="nofollow">All Categories →</a></li>
+			</ul>
+			</div>
+			</li>
+			<li ><a href="#">Conference</a></li>
+			<li class="navigation-right nodropdown"><a href="#"><i class="icon-tools"></i></a>
+			<div class="topic-dropdown">
+			<ul>
+			<li><a href="#" rel="nofollow" class="icon-user">User Profile</a></li>
+			<li><a href="#" rel="nofollow" class="icon-mail">Messages</a></li>
+			<li><a href="#" rel="nofollow" class="icon-cog">Privacy Settings</a></li>
+			<li><a href="#" rel="nofollow" class="icon-layout">Connect</a></li>
+			<li><a href="#" rel="nofollow">Sign Out</a></li>
+			</ul>
+			</div>
+			</li>
+			<li class="navigation-right"><!--<div>
+			<input type="text" name="s" placeholder="Search" required=""></input>
+			 
+			</div>-->
+			<div id="search_wrap">
+				<input type="text" placeholder="Search" id="search_text" name="search_text" class="rounded"></input>
+				<span id="search_button" class="icon-search" name="search_button"></span>
+			</div>
+			</li>
+
+			</ul>
+		</nav>
+	</div>
+<div id="body" class="with-sidebar">
+
+          
+	<div id="highlighted">
+		<div class="region region-highlighted">
+			<section id="block-block-1" class="block block-block">
+			<div>
+			<div class="product-flash-info border-radius">
+			<div class="image-container">
+				<a target="_blank" class="no-text-decoration" href="http://inmaps.linkedinlabs.com/">
+					<img style="background-image: url(&quot;http://engineering.linkedin.com/sites/default/files/left1.jpg&quot;); background-size: 100% 100%;" class="no-boder border-radius-top-left" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="><br>
+					<p>Product: InMaps</p>
+				</a><a target="_blank" class="no-text-decoration" href="http://inmaps.linkedinlabs.com/">
+					<img src="LinkedIn%20Engineering_files/middle1.jpg"><br>
+					<p>Hacker: InMaps Team</p>
+				</a><a target="_blank" class="no-text-decoration last" href="http://inmaps.linkedinlabs.com/">
+					<img src="LinkedIn%20Engineering_files/right1.jpg"><br>
+					<p>&nbsp;</p>
+				</a>			
+			</div>
+			</div>
+			</div>
+			</section>
+		</div>
+    </div>
+          
+      
+      <div id="content" class="page-main">
+                                                      
+          <div class="region region-content">
+    <section id="block-block-6" class="block block-block">
+
+      
+  <div>
+   <h2 class="engineering-prompt"><a target="_blank" href="#">We're seeking intelligent problem solvers who are inspired and motivated to change the world.</a></h2>  </div>
+
+</section>
+<section id="block-system-main" class="block block-system">
+
+      
+  <div>
+    <article id="article-135" class="node node-article node-promoted node-teaser en clearfix" role="article" about="/testing/quality-control-linkedins-testing-methodology" typeof="sioc:Item foaf:Document">
+        <header>
+                    <h2 property="dc:title" datatype="" class="article-title">
+          <a href="http://engineering.linkedin.com/testing/quality-control-linkedins-testing-methodology" rel="bookmark">Quality Control - LinkedIn's Testing Methodology</a>
+        </h2>
+        <span class="date">06/18/2013</span>
+                </header>
+  
+    <section>
+
+      <div class="article-info">
+      <div class="user-info">
+        <div class="avatar-wrapper">
+          <a target="_blank" href="http://www.linkedin.com/in/sonymohapatra" class="avatar">
+            <img src="LinkedIn%20Engineering_files/sony%2520mohapatra_0.png" height="100" width="100">
+          </a>
+        </div>
+        <div class="user-details">
+          <p><a target="_blank" class="username" href="http://www.linkedin.com/in/sonymohapatra">Sony Mohapatra</a></p>
+          <p>Senior Test Engineer</p>
+          <p>LinkedIn since 2011</p>
+        </div>
+        <div class="clear"></div>
+      </div>
+    At LinkedIn, we believe in designing products that offer great value
+ to our members, shipping those products quickly, and doing it all 
+without compromising on quality. In this post, I'll describe the...    
+&nbsp;|&nbsp;<a href="http://engineering.linkedin.com/testing/quality-control-linkedins-testing-methodology">Read More</a>
+    <div class="tags">
+  <h3>Tags:</h3>
+  <span class="tag"><a href="http://engineering.linkedin.com/tags/testing" rel="tag">Testing</a></span>  <span class="tag"><a href="http://engineering.linkedin.com/test-driven-development" rel="tag">test driven development</a></span></div>    </div>
+
+  
+	<div class="clear"></div>
+  </section>
+</article>
+<article id="article-138" class="node node-article node-promoted node-teaser en clearfix" role="article" about="/etsy/etsys-kellan-elliot-mccrea-and-john-allspaw-confidence-production" typeof="sioc:Item foaf:Document">
+        <header>
+                    <h2 property="dc:title" datatype="" class="article-title">
+          <a href="http://engineering.linkedin.com/etsy/etsys-kellan-elliot-mccrea-and-john-allspaw-confidence-production" rel="bookmark">Etsy's Kellan Elliot-McCrea and John Allspaw: Confidence in Production</a>
+        </h2>
+        <span class="date">06/13/2013</span>
+                </header>
+  
+    <section>
+
+      <div class="article-info">
+      <div class="user-info">
+        <div class="avatar-wrapper">
+          <a target="_blank" href="http://www.linkedin.com/in/florina/" class="avatar">
+            <img src="LinkedIn%20Engineering_files/flo_0.jpg" height="100" width="100">
+          </a>
+        </div>
+        <div class="user-details">
+          <p><a target="_blank" class="username" href="http://www.linkedin.com/in/florina/">Florina Xhabija</a></p>
+          <p>Engineering Manager</p>
+          <p>LinkedIn since 2008</p>
+        </div>
+        <div class="clear"></div>
+      </div>
+    
+LinkedIn Engineering will be hosting a public tech talk by Kellan Elliot-McCrea and     &nbsp;|&nbsp;<a href="http://engineering.linkedin.com/etsy/etsys-kellan-elliot-mccrea-and-john-allspaw-confidence-production">Read More</a>
+    <div class="tags">
+  <h3>Tags:</h3>
+  <span class="tag"><a href="http://engineering.linkedin.com/etsy" rel="tag">etsy</a></span>  <span class="tag"><a href="http://engineering.linkedin.com/deployment" rel="tag">deployment</a></span><span class="tag"><a href="http://engineering.linkedin.com/tags/testing" rel="tag">Testing</a></span><span class="tag"><a href="http://engineering.linkedin.com/tags/monitoring" rel="tag">monitoring</a></span></div>    </div>
+
+  
+	<div class="clear"></div>
+  </section>
+</article>
+
+
+
+
+
+<h2 class="element-invisible">Pages</h2><div class="item-list"><ul class="pager"><li class="pager-current first">1</li>
+<li class="pager-item"><a title="Go to page 2" href="http://engineering.linkedin.com/node?page=1">2</a></li>
+<li class="pager-item"><a title="Go to page 3" href="http://engineering.linkedin.com/node?page=2">3</a></li>
+<li class="pager-item"><a title="Go to page 4" href="http://engineering.linkedin.com/node?page=3">4</a></li>
+<li class="pager-item"><a title="Go to page 5" href="http://engineering.linkedin.com/node?page=4">5</a></li>
+<li class="pager-next"><a title="Go to next page" href="http://engineering.linkedin.com/node?page=1">next ›</a></li>
+<li class="pager-last last"><a title="Go to last page" href="http://engineering.linkedin.com/node?page=4">last »</a></li>
+</ul></div>  </div>
+
+</section>
+  </div>
+      </div>
+
+    </div>
+			
+<!-- prompt for Google Chrome Frame for IE6 users -->
+<!--[if lt IE 7 ]>
+<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+<script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+<![endif]-->
+
+
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Database Caching 22/34 queries in 0.007 seconds using disk
+Object Caching 2409/2468 objects using disk
+Content Delivery Network via speckycdn.sdm.netdna-cdn.com
+
+ Served from: speckyboy.com @ 2013-06-22 05:50:35 by W3 Total Cache --></body></html>
